@@ -1,0 +1,25 @@
+/* This stylesheet is used to style the public-facing components of the plugin. */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.w3d-simple-prlx-slider-wrapper {
+	position: relative;
+	max-width: 840px;
+	width: 100%;
+	/*padding: 0 50px;*/
+	margin: 0 auto;
+}
+.w3d-box-slider-wrapper {
+	position: relative;
+	max-width: 840px;
+	width: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+.w3d-mouse-prlx-slider-wrapper {
+	position: relative;
+	max-width: 840px;
+	width: 100%;
+	/*padding: 0 50px;*/
+	margin: 0 auto;
+}

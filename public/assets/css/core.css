@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* This stylesheet is used to style the public-facing components of the plugin. */
+/* line 5, ../sass/core.scss */
+.w3d-simple-prlx-slider-wrapper {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+  /*padding: 0 50px;*/
+  margin: 0 auto;
+}
+
+/* line 12, ../sass/core.scss */
+.w3d-box-slider-wrapper {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+/* line 19, ../sass/core.scss */
+.w3d-mouse-prlx-slider-wrapper {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+  /*padding: 0 50px;*/
+  margin: 0 auto;
+}

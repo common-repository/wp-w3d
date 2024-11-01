@@ -1,0 +1,22 @@
+/* This stylesheet is used to style the admin option form of the plugin. */
+.w3d-admin-figure {
+	max-width: 25%;
+	float: left;
+}
+/*
+.w3d-admin-figure:after { 
+	content: "."; 
+	visibility: hidden; 
+	display: block; 
+	height: 0; 
+	clear: both;
+}
+*/
+.w3d-admin-img {
+	max-width: 100%;
+}
+
+.w3d-admin-figure > figcaption {
+	text-align: center;
+	font-style: italic;
+}

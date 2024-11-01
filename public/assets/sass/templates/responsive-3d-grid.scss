@@ -1,0 +1,748 @@
+@import "base";
+
+/* ---------------------- 3D responsive grid ---------------------- */
+
+/* General grid styles */
+.w3d-pages-grid {
+    list-style: none;
+    padding: 0 0 50px 0;
+    margin: 0;
+}
+ 
+/* Clear floats */
+.w3d-pages-grid:before, 
+.w3d-pages-grid:after { 
+    content: " "; 
+    display: table; 
+}
+ 
+.w3d-pages-grid:after { 
+    clear: both; 
+}
+ 
+/* grid item */
+.w3d-pages-grid li {
+    width: 33%;
+    float: left;
+    height: 300px;
+    text-align: center;
+    /*border-top: 1px solid #ddd;*/
+    @include perspective( 1500px );
+    overflow: hidden;
+}
+ 
+/* grid lines */
+/*
+.w3d-pages-grid li:nth-child(-n+3){
+    border-top: none;
+}
+ 
+.w3d-pages-grid li:nth-child(3n-1),
+.w3d-pages-grid li:nth-child(3n-2) {
+    box-shadow: 1px 0 0 #ddd;
+}
+ */
+
+/* item anchor */
+.w3d-pages-grid li > a {
+	position: relative;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+/* element illustration */
+.w3d-pages-grid .w3d-pages-thumbnail {
+    position: absolute;
+    display: block;
+    top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+ 
+/* title element */
+.w3d-pages-grid .w3d-pages-title {
+    padding:0;
+    margin:0;
+}
+
+/* text element */
+.w3d-pages-grid .w3d-pages-excerpt {
+    position: relative;
+    display: block;
+}
+
+/* --------------------- */
+/* Regular styles Type-1 */
+/* --------------------- */
+
+/* grid item */
+.w3d-pages-grid.type-1 li {
+    height: 420px;
+}
+ 
+/* grid lines */
+/*
+.w3d-pages-grid.type-1 li:nth-child(-n+3){
+    border-top: none;
+}
+ 
+.w3d-pages-grid.type-1 li:nth-child(3n-1),
+.w3d-pages-grid.type-1 li:nth-child(3n-2) {
+    box-shadow: 1px 0 0 #ddd;
+}
+ */
+
+/* item anchor */
+.w3d-pages-grid.type-1 li > a {
+    color: #000;
+    @include transition(background 0.2s);
+}
+
+/* element illustration */
+.w3d-pages-grid.type-1 .w3d-pages-thumbnail {
+    @include background-size( cover );
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    @include transition(All 0.2s);
+}
+ 
+/* title element */
+.w3d-pages-grid.type-1 .w3d-pages-title {
+    position: relative;
+    margin: 0px;
+    padding: .5em 0;
+    font-size: 2em;
+
+    @include transition(All 0.3s, opacity 0.4s);
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+
+    background:none;
+    background-color:rgba(255,255,255,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    zoom:1;
+    color: #000;
+}
+
+/* text element */
+.w3d-pages-grid.type-1 .w3d-pages-excerpt {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 0 2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #fff;
+    max-height: 270px;
+
+    @include transform( rotateX(90deg) );
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    @include  opacity( 0 );
+    @include transition(All 0.2s ease-in-out 0.1s);
+}
+
+/* ------------------- */
+/* Hover styles type-1 */
+/* ------------------- */
+
+.w3d-pages-grid.type-1 li > a:hover {
+    background: #000;
+}
+
+.w3d-pages-grid.type-1 li:hover .w3d-pages-thumbnail,
+.touch .w3d-pages-grid.type-1 li .w3d-pages-thumbnail {
+    @include opacity(0.3);
+    @include transform(scale(0.9));
+}
+ 
+.w3d-pages-grid.type-1 li > a:hover .w3d-pages-title {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    @include transform(rotateX(-110deg));
+    @include backface-visibility( hidden );
+}
+ 
+.w3d-pages-grid.type-1 li:hover .w3d-pages-excerpt,
+.touch .w3d-pages-grid.type-1 li .w3d-pages-excerpt {
+    @include opacity(1);
+    @include transform(rotateX(0deg));
+}
+
+
+/* --------------------- */
+/* Regular styles Type-2 */
+/* --------------------- */
+
+/* grid item */
+.w3d-pages-grid.type-2 li {
+    height: 425px;
+}
+ 
+/* grid lines */
+/*
+.w3d-pages-grid.type-2 li:nth-child(-n+3){
+    border-top: none;
+}
+ 
+.w3d-pages-grid.type-2 li:nth-child(3n-1),
+.w3d-pages-grid.type-2 li:nth-child(3n-2) {
+    box-shadow: 1px 0 0 #ddd;
+}
+ */
+
+/* item anchor */
+.w3d-pages-grid.type-2 li > a {
+    color: #000;
+    @include transition(background 0.2s);
+}
+
+/* element illustration */
+.w3d-pages-grid.type-2 .w3d-pages-thumbnail {
+    @include background-size( cover );
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    @include transition(All 0.2s);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+ 
+/* title element */
+.w3d-pages-grid.type-2 .w3d-pages-title {
+    position: relative;
+    margin: 0px;
+    padding: .5em 0;
+    font-size: 2em;
+    @include transition(All 0.3s, opacity 0.4s);
+    background:none;
+    background-color:rgba(255,255,255,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    zoom:1;
+    color: #000;
+}
+
+/* text element */
+.w3d-pages-grid.type-2 .w3d-pages-excerpt {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 0 2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #000;
+    max-height: 270px;
+
+    @include transform( rotateY(-90deg) );
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    @include opacity(0);
+    @include transition(All 0.2s);
+}
+
+/* ------------------- */
+/* Hover styles type-2 */
+/* ------------------- */
+
+
+.w3d-pages-grid.type-2 li > a:hover {
+    /*background: #000;*/
+}
+
+.w3d-pages-grid.type-2 li:hover .w3d-pages-thumbnail,
+.touch .w3d-pages-grid.type-2 li .w3d-pages-thumbnail {
+    @include opacity(0.3);
+    @include transform( rotateY(90deg) );
+}
+
+.w3d-pages-grid.type-2 li > a:hover .w3d-pages-title {
+    padding: 1em 0;
+    color: #FFF;
+    @include opacity(1);
+    background:none;
+    background-color:rgba(0,0,0,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000);
+    zoom:1;
+}
+
+.w3d-pages-grid.type-2 li:hover .w3d-pages-excerpt,
+.touch .w3d-pages-grid.type-2 li .w3d-pages-excerpt {
+    @include opacity(1);
+    @include transform( rotateY(0deg) );
+}
+
+
+
+
+/* --------------------- */
+/* Regular styles Type-3 */
+/* --------------------- */
+
+/* grid item */
+.w3d-pages-grid.type-3 li {
+    height: 300px;
+}
+ 
+/* grid lines */
+/*
+.w3d-pages-grid.type-3 li:nth-child(-n+3){
+    border-top: none;
+}
+ 
+.w3d-pages-grid.type-3 li:nth-child(3n-1),
+.w3d-pages-grid.type-3 li:nth-child(3n-2) {
+    box-shadow: 1px 0 0 #ddd;
+}
+ */
+
+/* item anchor */
+.w3d-pages-grid.type-3 li > a {
+    color: #000;
+    @include transition(background 0.2s);
+}
+
+/* element illustration */
+.w3d-pages-grid.type-3 .w3d-pages-thumbnail {
+    @include background-size( cover );
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    @include transition(All 0.2s);
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+ 
+/* title element */
+.w3d-pages-grid.type-3 .w3d-pages-title {
+    position: relative;
+    margin: 0px;
+    padding: .5em 0;
+    font-size: 2em;
+    @include transition(All 0.3s, opacity 0.4s);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    background:none;
+    background-color:rgba(255,255,255,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    zoom:1;
+    color: #000;
+}
+
+/* text element */
+.w3d-pages-grid.type-3 .w3d-pages-excerpt {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding: 50px 1em 0 1em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #000;
+    max-height: 270px;
+    @include transform(rotateX(-90deg));
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    @include opacity(0);
+    @include transition(All 0.2s);
+}
+
+/* ------------------- */
+/* Hover styles type-3 */
+/* ------------------- */
+/*
+.w3d-pages-grid.type-3 li > a:hover {
+    background: #000;
+}
+*/
+.w3d-pages-grid.type-3 li:hover .w3d-pages-thumbnail,
+.touch .w3d-pages-grid.type-3 li .w3d-pages-thumbnail {
+    @include opacity(0.3);
+    @include transform(rotateX(90deg));
+}
+
+.w3d-pages-grid.type-3 li > a:hover .w3d-pages-title {
+    color: #FFF;
+    background:none;
+    background-color:rgba(255,255,255,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    zoom:1;
+    @include transform(rotateX(110deg));
+    @include backface-visibility( hidden );
+}
+
+.w3d-pages-grid.type-3 li:hover .w3d-pages-excerpt,
+.touch .w3d-pages-grid.type-3 li .w3d-pages-excerpt {
+    @include opacity(1);
+    @include transform(rotateX(0deg));
+}
+
+/* ----------------------------------------- */
+/*          Type 4                           */
+/*-------------------------------------------*/
+
+.type-4 li {
+    overflow: visible;
+}
+
+.type-4 .photo-wrapper {
+    height: 97%;
+    width: 97%;
+
+    @include perspective( 1800px );
+    @include transform-style( preserve-3d );
+    @include transition(transform 0.6s ease-in-out);
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.type-4 .photo-wrapper > div,
+.type-4 .photo-wrapper > figure {
+    @include backface-visibility( hidden );
+}
+
+.type-4 figure {
+    position: absolute;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 20px 15px;
+    text-align: center;
+    @include box-shadow( inset 0 0 30px rgba(0, 0, 0, 0.5) );
+}
+
+.type-4 figure figcaption h3 {
+    margin: 20px 0 0 0;
+    color: #a7a0a2;
+    font-size: 16px;
+}
+
+.type-4 figure img {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: #f9f9f9;
+}
+
+.photo-back {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #000;
+    padding: 2em 1.5em;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25;
+
+    @include transform(rotateY(180deg));
+    @include box-shadow( inset 0 0 30px rgba(0, 0, 0, 0.5) );
+}
+
+.photo-back p {
+    margin: 0;
+}
+
+.photo-back p span {
+    text-decoration: line-through;
+}
+
+.type-4 a:hover .photo-wrapper {
+    @include transform(rotateY(-180deg));
+}
+
+/* ----------------------------------------- */
+/*          Type 5                           */
+/*-------------------------------------------*/
+
+.type-5 li {
+    overflow: visible;
+}
+
+.type-5 .photo-wrapper {
+    height: 97%;
+    width: 97%;
+
+    @include perspective( 1800px );
+    @include transform-style( preserve-3d );
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+.type-5 .photo-wrapper > div,
+.type-5 .photo-wrapper > figure {
+    @include backface-visibility( hidden );
+}
+
+.type-5 figure {
+    position: absolute;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 20px 15px;
+    text-align: center;
+    @include box-shadow(inset 0 0 30px rgba(0, 0, 0, 0.5));
+}
+
+.type-5 figure figcaption h3 {
+    margin: 20px 0 0 0;
+    color: #a7a0a2;
+    font-size: 16px;
+}
+
+.type-5 figure img {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: #f9f9f9;
+}
+
+.photo-back {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #000;
+    padding: 2em 1.5em;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25;
+
+    @include transform(rotateY(180deg));
+    @include box-shadow(inset 0 0 30px rgba(0, 0, 0, 0.5));
+}
+
+.photo-back p {
+    margin: 0;
+}
+
+.photo-back p span {
+    text-decoration: line-through;
+}
+
+.type-5 a:hover .photo-wrapper {
+    /* animated via JS */
+}
+
+/* --------------------- */
+/* Regular styles Type-6 */
+/* --------------------- */
+
+/* grid item */
+.w3d-pages-grid.type-6 li {
+    height: 420px;
+}
+ 
+/* grid lines */
+/*
+.w3d-pages-grid.type-6 li:nth-child(-n+3){
+    border-top: none;
+}
+ 
+.w3d-pages-grid.type-6 li:nth-child(3n-1),
+.w3d-pages-grid.type-6 li:nth-child(3n-2) {
+    box-shadow: 1px 0 0 #ddd;
+}
+ */
+
+/* item anchor */
+.w3d-pages-grid.type-6 li > a {
+    color: #000;
+    @include transition(All 0.2s);
+    @include transform( translateZ(-100px) );
+}
+
+/* element illustration */
+.w3d-pages-grid.type-6 .w3d-pages-thumbnail {
+    @include background-size( cover );
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    @include transition(All 0.2s);
+}
+ 
+/* title element */
+.w3d-pages-grid.type-6 .w3d-pages-title {
+    position: relative;
+    margin: 0px;
+    padding: .5em 0;
+    font-size: 2em;
+
+    @include transition(All 0.3s, opacity 0.4s);
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+
+    background:none;
+    background-color:rgba(255,255,255,0.7);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+    zoom:1;
+    color: #000;
+}
+
+/* text element */
+.w3d-pages-grid.type-6 .w3d-pages-excerpt {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 0 2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #fff;
+    max-height: 270px;
+
+    @include transform( rotateX(90deg) );
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    @include  opacity( 0 );
+    @include transition(All 0.2s ease-in-out 0.1s);
+}
+
+/* ------------------- */
+/* Hover styles type-6 */
+/* ------------------- */
+
+.w3d-pages-grid.type-6 li > a.active {
+    @include transform( translateZ(0px) );
+    background-color: #222;
+}
+
+.w3d-pages-grid.type-6 li > a.inactive {
+    -webkit-filter: grayscale(0.8) blur(5px);
+    -moz-filter: grayscale(0.8) blur(5px);
+    filter: grayscale(0.5) blur(10px);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    @include transform( translateZ(-300px) );
+}
+
+.w3d-pages-grid.type-6 li:hover .w3d-pages-thumbnail,
+.touch .w3d-pages-grid.type-6 li .w3d-pages-thumbnail {
+    @include opacity(0.5);
+    /*@include transform(scale(0.9));*/
+}
+ 
+.w3d-pages-grid.type-6 li > a:hover .w3d-pages-title {
+    /*color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    @include transform(rotateX(-110deg));
+    @include backface-visibility( hidden );*/
+    font-size:90%;
+}
+ 
+.w3d-pages-grid.type-6 li:hover .w3d-pages-excerpt,
+.touch .w3d-pages-grid.type-6 li .w3d-pages-excerpt {
+    @include opacity(1);
+    @include transform(rotateX(0deg));
+}
+
+ /*
+  * --- Media Queries ---
+  */
+ 
+@media screen and (max-width: 62.75em) {
+    .w3d-pages-grid li {
+        width: 50%;
+    }
+ 
+    /* reset the grid lines */
+    .w3d-pages-grid li:nth-child(-n+3){
+        border-top: 1px solid #ddd;
+    }
+ 
+    .w3d-pages-grid li:nth-child(3n-1),
+    .w3d-pages-grid li:nth-child(3n-2) {
+        box-shadow: none;
+    }
+ 
+    .w3d-pages-grid li:nth-child(-n+2){
+        border-top: none;
+    }
+ 
+    .w3d-pages-grid li:nth-child(2n-1) {
+        box-shadow: 1px 0 0 #ddd;
+    }
+}
+ 
+@media screen and (max-width: 41.6em) { 
+    .w3d-pages-grid li {
+        width: 100%;
+    }
+ 
+    .w3d-pages-grid li:nth-child(-n+2){
+        border-top: 1px solid #ddd;
+    }
+ 
+    .w3d-pages-grid li:nth-child(2n-1) {
+        box-shadow: none
+    }
+ 
+    .w3d-pages-grid li:first-child {
+        border-top: none;
+    }
+}
+ 
+@media screen and (max-width: 25em) { 
+    .w3d-pages-grid {
+        font-size: 80%;
+    }
+ 
+    .w3d-pages-grid .w3d-pages-category {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,511 @@
+/**
+ * Base compass file : http://compass-style.org/help/tutorials/best_practices/
+ */
+/* ---------------------- Slider : mouse parallax ---------------------- */
+/* line 5, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+/* line 12, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+}
+
+/* line 22, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide-current {
+  z-index: 1000;
+}
+
+/* line 25, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide {
+  left: 100%;
+}
+
+/* line 28, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide.w3d-mouse-prlx-slide-current {
+  left: 0px;
+}
+
+/* line 34, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide h2,
+.w3d-mouse-prlx-slide p,
+.w3d-mouse-prlx-slide div.parallax-layer,
+.w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+  position: absolute;
+  opacity: 0;
+  margin-top: 0px;
+  left: 10%;
+  -webkit-transition: opacity 0.4s ease-in-out 0s;
+  -moz-transition: opacity 0.4s ease-in-out 0s;
+  -o-transition: opacity 0.4s ease-in-out 0s;
+  -ms-transition: opacity 0.4s ease-in-out 0s;
+  transition: opacity 0.4s ease-in-out 0s;
+}
+
+/* line 45, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide div.parallax-layer {
+  left: 0;
+}
+
+/* line 51, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide h2,
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide p,
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide div.parallax-layer,
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+  opacity: 1;
+}
+
+/* line 54, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider-fb .w3d-mouse-prlx-slide div.parallax-layer {
+  left: 0;
+}
+
+/* line 58, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.slide-content {
+  position: absolute;
+  top: 40px;
+  height: 170px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: All 0.25s ease-in-out 0.4s;
+  -moz-transition: All 0.25s ease-in-out 0.4s;
+  -o-transition: All 0.25s ease-in-out 0.4s;
+  -ms-transition: All 0.25s ease-in-out 0.4s;
+  transition: All 0.25s ease-in-out 0.4s;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+
+/* line 77, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide-current .slide-content {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* line 86, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide h2 {
+  color: #000;
+  font-size: 24px;
+  top: 10px;
+  white-space: nowrap;
+  z-index: 10;
+  font-family: "Open Sans", sans-serif;
+  /* v0.9 - prevent extra long titles to go over the h2 box */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 98, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide p {
+  top: 45px;
+  color: #2d2d2d;
+  font-size: 14px;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  padding-right: 10%;
+  line-height: 125%;
+}
+
+/* line 107, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+  top: 125px;
+  color: #FFF;
+  background: #4f989d;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 116, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide .w3d-mouse-prlx-link:hover {
+  background: #4f989d;
+}
+
+/* line 119, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-dots {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 0px;
+  bottom: 20px;
+  z-index: 2000;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 129, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-dots span {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4f989d;
+  margin: 3px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* line 142, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-dots span.w3d-mouse-prlx-dots-current:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+/* line 159, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-arrows {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 163, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-arrows span {
+  position: absolute;
+  top: 50%;
+  height: 36px;
+  width: 23px;
+  cursor: pointer;
+  z-index: 2000;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* line 177, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slider:hover .w3d-mouse-prlx-arrows span {
+  opacity: 1;
+}
+
+/* line 180, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-arrows span.w3d-mouse-prlx-arrows-prev {
+  left: 10px;
+  background: transparent url(../../img/sample/mouse-parallax/nav-left.png) no-repeat 50% 50%;
+}
+
+/* line 184, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-arrows span.w3d-mouse-prlx-arrows-next {
+  right: 10px;
+  background: transparent url(../../img/sample/mouse-parallax/nav-right.png) no-repeat 50% 50%;
+}
+
+/* line 192, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide-current h2,
+.w3d-mouse-prlx-slide-current p,
+.w3d-mouse-prlx-slide-current div.parallax-layer,
+.w3d-mouse-prlx-slide-current .w3d-mouse-prlx-link {
+  opacity: 1;
+}
+
+/* line 195, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide-current div.parallax-layer {
+  left: 0;
+}
+
+/* Wordpress styles */
+/* line 200, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.postbox label {
+  font-style: italic;
+}
+
+/* --- Sample slides ------------ */
+/* line 205, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(1) .parallax-layer {
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+}
+
+/* line 212, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(1) .parallax-layer.css-animate {
+  transition: margin 350ms ease-in-out 200ms;
+}
+
+/* line 216, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(1) .parallax-layer:nth-child(1) {
+  background: transparent url(../../img/sample/mouse-parallax/slide1-layer3.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 220, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(1) .parallax-layer:nth-child(2) {
+  background: transparent url(../../img/sample/mouse-parallax/slide1-layer2.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 224, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(1) .parallax-layer:nth-child(3) {
+  background: transparent url(../../img/sample/mouse-parallax/slide1-layer1.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 229, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer {
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+}
+
+/* line 236, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer.css-animate {
+  transition: margin 350ms ease-in-out 200ms;
+}
+
+/* line 240, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer:nth-child(1) {
+  background: transparent url(../../img/sample/mouse-parallax/slide2-layer4.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 244, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer:nth-child(2) {
+  background: transparent url(../../img/sample/mouse-parallax/slide2-layer3.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 248, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer:nth-child(3) {
+  background: transparent url(../../img/sample/mouse-parallax/slide2-layer2.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 252, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(2) .parallax-layer:nth-child(4) {
+  background: transparent url(../../img/sample/mouse-parallax/slide2-layer1.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 257, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(3) .parallax-layer {
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+}
+
+/* line 264, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(3) .parallax-layer.css-animate {
+  transition: margin 350ms ease-in-out 200ms;
+}
+
+/* line 268, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(3) .parallax-layer:nth-child(1) {
+  background: transparent url(../../img/sample/mouse-parallax/slide3-layer3.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 272, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(3) .parallax-layer:nth-child(2) {
+  background: transparent url(../../img/sample/mouse-parallax/slide3-layer2.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 276, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+.w3d-mouse-prlx-slide:nth-child(3) .parallax-layer:nth-child(3) {
+  background: transparent url(../../img/sample/mouse-parallax/slide3-layer1.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Medium screens and tablets ----------- */
+@media only screen and (max-width: 1024px) {
+  /* Styles */
+  /* line 285, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slider {
+    /*min-width: 708px;*/
+    height: 370px;
+  }
+
+  /* line 289, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide {
+    background-color: transparent;
+  }
+
+  /* line 292, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide h2 {
+    font-size: 50px;
+    top: 60px;
+  }
+
+  /* line 293, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide p {
+    font-size: 16px;
+    top: 155px;
+  }
+
+  /* line 294, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+    border-radius: 25px;
+    border: 7px solid rgba(255, 255, 255, 0.8);
+    padding: 2px 16px 0px;
+    font-size: 15px;
+    line-height: 25px;
+    /*width: 75px;*/
+  }
+}
+/* Tablets or smartphones ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  /* line 308, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slider {
+    /*min-width: 420px;*/
+    height: 340px;
+  }
+
+  /* line 312, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide {
+    background-color: transparent;
+  }
+
+  /* line 315, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide h2 {
+    font-size: 35px;
+    top: 40px;
+  }
+
+  /* line 316, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide p {
+    font-size: 14px;
+    top: 120px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* Styles */
+  /* line 321, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slider {
+    /*min-width: 280px;*/
+    height: 310px;
+  }
+
+  /* line 325, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide {
+    background-color: transparent;
+  }
+
+  /* line 328, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide h2 {
+    font-size: 25px;
+    top: 20px;
+  }
+
+  /* line 329, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide p {
+    font-size: 12px;
+    top: 100px;
+  }
+
+  /* line 330, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    padding: 2px 12px 0px;
+    font-size: 12px;
+    line-height: 20px;
+    /*width: 65px;*/
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* Styles */
+  /* line 342, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slider {
+    height: 280px;
+  }
+
+  /* line 345, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide {
+    background-color: transparent;
+  }
+
+  /* line 348, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide h2 {
+    font-size: 20px;
+    top: 15px;
+  }
+
+  /* line 349, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide p {
+    font-size: 12px;
+    top: 60px;
+  }
+
+  /* line 350, ../../sass/sliders/w3d-mouse-parallax-slider.scss */
+  .w3d-mouse-prlx-slide .w3d-mouse-prlx-link {
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    padding: 2px 5px 0px;
+    font-size: 12px;
+    line-height: 20px;
+    /*width: 60px;*/
+  }
+}
